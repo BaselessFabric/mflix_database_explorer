@@ -9,7 +9,34 @@ This project creates a Java application that uses a MongoDB database which conta
     GET /web/movie/delete/{id}: Deletes a movie by its ID.
 
     The above is similar for the comments and theaters and users controller
-    
+
+
+# CI/CD Pipeline
+
+This project implements a robust Continuous Integration and Continuous Deployment (CI/CD) pipeline to ensure smooth and automated delivery of updates. Here's an overview of the process:
+
+1. **Version Control**: The main branch of our repository represents the Minimum Viable Product (MVP).
+
+2. **Automated Builds**: When changes are pushed to the main branch, a webhook is sent to our Jenkins server.
+
+3. **Build Process**: Jenkins triggers a build using Maven, compiling and testing the application.
+
+4. **Containerization**: The application is then containerized using Docker, creating a portable and consistent environment.
+
+5. **Image Repository**: The Docker image is uploaded to Amazon Elastic Container Registry (ECR) for storage and versioning.
+
+6. **Deployment**: Jenkins triggers an update on AWS App Runner, which pulls the new image from ECR and deploys it automatically.
+
+This CI/CD pipeline ensures that every push to the main branch results in an automated build, test, and deployment process, maintaining the reliability and up-to-date status of our application.
+
+# Live Demo
+
+A live version of the application can be accessed at: https://z23czgqbzi.eu-west-2.awsapprunner.com/
+
+This demo represents the latest stable version of our application, automatically deployed through our CI/CD pipeline.
+
+
+
 # Acceptance Criteria
 
     Interact with the MongoDb mflix World Database

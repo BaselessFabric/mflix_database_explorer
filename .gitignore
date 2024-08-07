@@ -1,19 +1,15 @@
+# Maven and Target Directory
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### IntelliJ IDEA ###
-.idea/*
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
+# JAR files
+*.jar
+*.war
+*.ear
 
-### Eclipse ###
+# STS
 .apt_generated
 .classpath
 .factorypath
@@ -22,7 +18,14 @@ target/
 .springBeans
 .sts4-cache
 
-### NetBeans ###
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+# NetBeans
 /nbproject/private/
 /nbbuild/
 /dist/
@@ -32,10 +35,49 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
+# VS Code
 .vscode/
 
-### Mac OS ###
-.DS_Store
+# Eclipse
+.project
+.classpath
+.c9/
+.settings/
 
-*.properties
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Node
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+*.tmp
+*.swp
+*.swo
+
+# Generated files
+*.class
+*.exe
+*.dll
+*.so
+*.dylib
+
+# IDE files
+*.sublime-project
+*.sublime-workspace
+.idea/
+*.code-workspace
+
+application-dev.properties
